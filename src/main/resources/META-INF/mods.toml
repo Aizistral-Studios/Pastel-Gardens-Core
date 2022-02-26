@@ -1,0 +1,11 @@
+license="WTFPL"
+modLoader="javafml"
+loaderVersion="[31,)"
+[[mods]]
+modId="pastelgardens"
+version="1.0.0"
+displayName="Pastel Gardens Core"
+authors="Aizistral"
+description='''
+None
+'''

@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.aizistral.pastelgardens.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "pastelgardenscore.refmap.json",
+  "verbose": true,
+  "mixins": [
+	"MixinBackpackCapability"
+  ],
+  "client": [
+	"MixinBlazeGear"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
