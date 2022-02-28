@@ -1,7 +1,7 @@
 package com.aizistral.pastelgardens;
 
-import com.integral.worldnamerandomizer.handlers.ClientConfigHandler;
-import com.integral.worldnamerandomizer.handlers.WNREventHandler;
+import com.aizistral.pastelgardens.handlers.ClientConfigHandler;
+import com.aizistral.pastelgardens.handlers.PGCEventHandler;
 
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.common.MinecraftForge;
@@ -26,6 +26,10 @@ public class PastelGardensCore {
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onLoadComplete);
 
 		MinecraftForge.EVENT_BUS.register(this);
+		MinecraftForge.EVENT_BUS.register(new PGCEventHandler());
+
+		ClientConfigHandler.constructConfig();
+		ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ClientConfigHandler.clientConfig);
 	}
 
 	private void onLoadComplete(final FMLLoadCompleteEvent event) {
